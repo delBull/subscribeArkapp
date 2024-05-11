@@ -25,6 +25,7 @@
   },
   "devDependencies": {
     "@types/mailchimp__mailchimp_marketing": "^3.0.9",
+    "@types/next": "^9.0.0",
     "@types/node": "20.12.11",
     "@types/react": "18.3.2",
     "typescript": "5.4.5"

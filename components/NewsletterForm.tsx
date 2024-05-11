@@ -42,7 +42,7 @@ function NewsletterForm() {
     const data = await res.json();
 
     if (data.error) {
-      setErrorMessage("Hey, you are already subscribed!");
+      setErrorMessage("Hey, ya te has suscrito!");
       setSuccessMessage(undefined);
       return;
     }
@@ -67,7 +67,7 @@ function NewsletterForm() {
           <input
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            placeholder="Email address"
+            placeholder="Agrega tu email"
             required
             type="email"
             className="flex-1 text-white text-sm sm:text-base outline-none placeholder-[#4B4C52] group-focus-within:placeholder-white bg-transparent placeholder:transition-colors placeholder:duration-300"
@@ -76,16 +76,16 @@ function NewsletterForm() {
             ref={buttonRef}
             className={`${
               active && "active"
-            } disabled:!bg-[#17141F] disabled:grayscale-[65%] disabled:opacity-50 disabled:cursor-not-allowed text-sm md:text-base`}
+            } disabled:!bg-[#17141F] disabled:grayscale-[25%] disabled:opacity-60 disabled:cursor-not-allowed text-sm md:text-base`}
             disabled={!input}
             type="submit"
           >
-            <span className="default">Subscribe</span>
+            <span className="default">Únete</span>
             <span className="success">
               <svg viewBox="0 0 16 16">
                 <polyline points="3.75 9 7 12 13 5"></polyline>
               </svg>
-              Done
+              Hecho
             </span>
             <svg className="trails" viewBox="0 0 33 64">
               <path d="M26,4 C28,13.3333333 29,22.6666667 29,32 C29,41.3333333 28,50.6666667 26,60"></path>
@@ -108,16 +108,15 @@ function NewsletterForm() {
             <div className="text-xs sm:text-sm text-[#4B4C52]">
               {successMessage ? (
                 <p>
-                  We&apos;ve added{" "}
+                  Ya eres parte{" "}
                   <span className="text-[#ADB0B1]">
                     {successMessage.email_address}
                   </span>{" "}
-                  to our waitlist. We&apos;ll let you know when we launch!
+                  de los Arkers!. Estaremos en contacto para avisarte del lanzamiento.
                 </p>
               ) : (
                 <p>
-                  You are already added to our waitlist. We&apos;ll let you know
-                  when we launch!
+                  Ya eres parte de los Arkers. Estaremos en contacto para avisarte del lanzamiento.
                 </p>
               )}
             </div>
