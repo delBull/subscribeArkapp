@@ -19,7 +19,7 @@ export async function POST(request: Request) {
     return new Response(JSON.stringify({ res }));
   } catch (error: any) {
     return new Response(
-      JSON.stringify({ error: JSON.parse(error.response.text) })
+      JSON.stringify({ error })
     );
   }
 }
